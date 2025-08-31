@@ -1,12 +1,16 @@
 {
-  "name": "katlego-makete's-portfolio-**",
+"homepage": "https://katlegoxoxo.github.io/website-ksm/", 
+
+  "name": "katlego-makete-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+   "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.1",
