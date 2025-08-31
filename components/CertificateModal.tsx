@@ -20,7 +20,6 @@ const modalVariants: Variants = {
     visible: { opacity: 1, scale: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 30 } },
     exit: { opacity: 0, scale: 0.8, y: 50, transition: { duration: 0.2 } },
 };
-
 const CertificateModal: React.FC<CertificateModalProps> = ({ item, onClose }) => {
   if (!item.certificateUrl) return null;
 
@@ -35,23 +34,30 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ item, onClose }) =>
     >
       <motion.div
         variants={modalVariants}
-        className="bg-slate-800/80 border border-white/10 rounded-xl w-full max-w-2xl max-h-[90vh] flex flex-col relative"
+        className="bg-slate-800/80 border border-white/10 rounded-xl w-full max-w-5xl max-h-[95vh] flex flex-col relative overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-4 flex-grow overflow-hidden">
-            <img 
-                src={item.certificateUrl} 
-                alt={`${item.degree} Certificate`} 
-                className="w-full h-full object-contain rounded-lg"
-                style={{ maxHeight: 'calc(90vh - 120px)' }}
-            />
+        {/* PDF Preview */}
+        <div className="flex-grow">
+          <iframe
+            src={item.certificateUrl}
+            title={`${item.degree} Certificate`}
+            className="w-full h-full border-none"
+          />
         </div>
+
+        {/* Footer */}
         <div className="p-4 text-center border-t border-white/10 flex-shrink-0">
-            <h3 className="font-bold text-lg text-cyan-400">{item.degree}</h3>
-            <p className="text-slate-400">{item.institution}</p>
+          <h3 className="font-bold text-xl text-cyan-400">{item.degree}</h3>
+          <p className="text-slate-300">{item.institution}</p>
         </div>
-         <button onClick={onClose} className="absolute top-2 right-2 text-slate-500 hover:text-white transition-colors bg-slate-900/50 rounded-full w-8 h-8 flex items-center justify-center z-10">
-            <i className="fas fa-times"></i>
+
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-3 right-3 text-slate-200 hover:text-white transition-colors bg-slate-900/60 rounded-full w-10 h-10 flex items-center justify-center z-10"
+        >
+          <i className="fas fa-times text-lg"></i>
         </button>
       </motion.div>
     </motion.div>
