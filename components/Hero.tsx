@@ -33,9 +33,14 @@ const Hero: React.FC = () => {
             IT graduate with hands-on experience building web & mobile solutions. I bridge product needs and technical execution — clean UI/UX, data-aware logic, and deployable code.
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-wrap justify-center md:justify-start items-center gap-4 mb-4">
-            <a href="/assets/Katlego_Makete_CV.pdf" download className="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold py-2 px-5 rounded-md transition-colors flex items-center gap-2">
+            <a
+              href={`${import.meta.env.BASE_URL}files/KatlegoMaketeAspiringSoftwareEngineer.pdf`}
+              download
+              className="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold py-2 px-5 rounded-md transition-colors flex items-center gap-2"
+            >
               Download CV <i className="fas fa-download"></i>
             </a>
+
             <a href="https://github.com/katlegoxoxo" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 text-slate-200 font-bold py-2 px-5 rounded-md transition-colors flex items-center gap-2">
               <i className="fab fa-github"></i> GitHub
             </a>
