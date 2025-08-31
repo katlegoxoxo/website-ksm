@@ -25,7 +25,8 @@ export const PROJECTS: Project[] = [
     description: 'Created an AI-powered image generation app using modern JS and APIs for creative automation.',
     technologies: ['HTML', 'JavaScript', 'APIs'],
     githubUrl: 'https://github.com/katlegoxoxo/image-gen-xo.git',
-    imageUrl: 'https://picsum.photos/seed/imagegen/800/600',
+    imageUrl: `${import.meta.env.BASE_URL}images/slatt.png`
+
   },
   {
     name: 'AI Fundamentals Chatbot',
@@ -63,16 +64,17 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 ];
 
 export const EDUCATION: EducationItem[] = [
-    { 
-        degree: 'Diploma in Software Development', 
-        institution: 'IIE Rosebank College', 
-        dateRange: '2022-2024',
-        certificateUrl: 'https://picsum.photos/seed/diploma-cert/800/1120'
-    }
+  {
+    degree: 'Diploma in Software Development',
+    institution: 'IIE Rosebank College',
+    dateRange: '2022-2024',
+    certificateUrl: `${import.meta.env.BASE_URL}files/Qualification.pdf`
+
+  }
 ];
 
 export const CERTIFICATIONS: Certification[] = [
-    { name: 'Introduction to Generative AI', imageUrl: 'https://picsum.photos/seed/genai/100/100', verifyUrl: 'https://www.cloudskillsboost.google/public_profiles/28ea05c6-984f-4824-9941-2e9a745a386e/badges/8636638' },
-    { name: 'Innovating with Google Cloud AI', imageUrl: 'https://picsum.photos/seed/gcai/100/100', verifyUrl: '#' },
-    { name: 'Java & Python Certificates', imageUrl: 'https://picsum.photos/seed/javacert/100/100', verifyUrl: '#' },
+  { name: 'Introduction to Generative AI', imageUrl: 'https://picsum.photos/seed/genai/100/100', verifyUrl: 'https://www.cloudskillsboost.google/public_profiles/28ea05c6-984f-4824-9941-2e9a745a386e/badges/8636638' },
+  { name: 'Innovating with Google Cloud AI', imageUrl: 'https://picsum.photos/seed/gcai/100/100', verifyUrl: '#' },
+  { name: 'Java & Python Certificates', imageUrl: 'https://picsum.photos/seed/javacert/100/100', verifyUrl: '#' },
 ];
