@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     description: 'Created an AI-powered chatbot using no-code tools, demonstrating an understanding of conversational AI principles and rapid prototyping.',
     technologies: ['No-Code AI', 'Chatbot Design'],
     githubUrl: 'https://github.com/katlegoxoxo',
-    imageUrl: 'https://picsum.photos/seed/chatbot/800/600',
+    imageUrl: '${import.meta.env.BASE_URL}images/schoolhub.png',
   },
 ];
 
